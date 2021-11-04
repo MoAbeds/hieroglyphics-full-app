@@ -1,0 +1,138 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+
+  .BG_Grad{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,76,9,1) 48%, rgba(184,144,55,1) 95%);
+    color: #D7D7EF;
+  }
+  .css-3d-text {
+    font-size: 70px;
+    color: #8f3d0a;
+    font-family: Verdana, Geneva, sans-serif;
+    text-shadow: 0px 0px 0 rgb(138,56,5),
+                 1px 1px 0 rgb(133,51,0),
+                 2px 2px 0 rgb(128,46,0),
+                 3px 3px 0 rgb(123,41,0),
+                 4px 4px 0 rgb(118,36,0),
+                 5px 5px 0 rgb(113,31,0),
+                 6px 6px 0 rgb(108,26,0),
+                 7px 7px 0 rgb(103,21,0),
+                 8px 8px 0 rgb(98,16,0),
+                 9px 9px 0 rgb(93,11,0),
+                 10px 10px  0 rgb(88,6,0),
+                 11px 11px 10px rgba(0,0,0,0.6),
+                 11px 11px 1px rgba(0,0,0,0.5),
+                 0px 0px 10px rgba(0,0,0,.2);
+ }
+ .css-button {
+	font-family: Arial Black;
+	color: #FFFFFF;
+	font-size: 16px;
+	border-radius: 44px;
+	padding: 10px 15px;
+	background: linear-gradient(323deg, #d68b22 44%, #d12a67 100%);
+	text-shadow: 1px 1px 5px #528ecc;
+	box-shadow: inset 3px 1px 13px 0px #bbdaf7;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+}
+.css-button:hover {
+	background: linear-gradient(323deg, #d12a67 44%, #d68b22 100%);
+}
+.loader-circle-15 {
+  height: 70px;
+  width: 70px;
+  border-top: 10px #008744 solid;
+  border-right: 10px #0057e7 solid;
+  border-bottom: 10px #d62d20 solid;
+  border-left: 10px #ffa700 solid;
+  border-radius: 50%;
+  animation: rotation 1s infinite linear;
+  display: inline-block;
+}
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+.file-drop-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 450px;
+  max-width: 100%;
+  padding: 25px;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  transition: 0.2s;
+  &.is-active {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.fake-btn {
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.file-msg {
+  font-size: small;
+  font-weight: 300;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+  &:focus {
+    outline: none;
+  }
+}
+.Btn_Des {
+	font-family: Arial;
+	color: #FFFFFF;
+	font-size: 16px;
+	border-radius: 50px;
+	padding: 10px 18px;
+	background: linear-gradient(180deg, #d19a1b 5%, #cf6646 100%);
+	text-shadow: 1px 1px 1px #528ecc;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+}
+.css-button:hover {
+	background: linear-gradient(180deg, #cf6646 5%, #d19a1b 100%);
+}
+}
